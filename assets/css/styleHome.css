@@ -41,3 +41,8 @@
   backdrop-filter: brightness(30%);
 }
 
+@media only screen and (max-width: 600px) {
+  #content {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

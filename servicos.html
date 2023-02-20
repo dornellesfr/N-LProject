@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2/2145.png" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/styleHome.css">
+  <link rel="stylesheet" href="./assets/css/styleServices.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -62,35 +62,10 @@
   </div>
 </nav>
 <!-- End navbar -->
-
-<!-- Content home page -->
-<div id="bg-home-1" class="fixed w-screen h-screen"></div>
-<div id="bg-home-2" class="fixed w-screen h-screen brightness-50">
-</div>
-<main id="home">
-  <section id="content" class="grid grid-cols-2 w-full h-10/12 m-auto mt-10">
-    <div></div>
-    <div class="flex flex-col gap-2 items-center">
-      <h1 class="text-4xl text-white font-extrabold">N&L -
-        <small class="ml-2 font-semibold text-white">Prestadora de Serviços</small>
-      </h1>
-      <h2 class="text-2xl text-white font-extrabold"> Um pouco sobre nós:</h2>
-      <ul class="max-w-md space-y-1 text-white list-disc list-inside">
-          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:border-4 transition-all">
-            Realizamos operações de terraplenagem em geral;
-          </li>
-          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:border-4 transition-all">
-            Temos grande experiência em operações ligadas a estradas florestais, barragens e terraços; e
-          </li>
-          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:border-4 transition-all">
-            Atuamos em toda metade Sul do Estado do Rio Grande do Sul.
-          </li>
-      </ul>
-      <a href="/servicos" id="btn-our-services" class="w-4/12 border-solid border-2 border-white text-white hover:text-white hover:backdrop-blur-sm hover:w-8/12 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-2 py-2.5 text-center mt-10 transition-all">Conheça nossos serviços</a>
-    </div>
-  </section>
+<!-- Content services page -->
+<main id="services"> 
 </main>
-<!-- End content home page -->
+<!-- End content services page -->
 <!-- Start footer -->
 <footer class="fixed bottom-0 left-0 z-20 w-full bg-blue-800 shadow md:flex md:items-center md:justify-between md:p-2">
   <span class="text-sm text-white sm:text-center">© 2023 <a href="#" class="hover:underline">N-L™</a>. Todos os Direitos reservados.
@@ -105,9 +80,8 @@
   </ul>
 </footer>
 <!-- End footer -->
-<script src="./assets/js/home-modules/navbarCollapse.js"></script>
-<script src="./assets/js/home-modules/homeChangeBackground.js"></script>
-<script src="./assets/js/home-modules/btnOurServices.js"></script>
+<script src="./assets/home-modules/navbarCollapse.js"></script>
+<script src="./assets/js/services-modules/MyCarousel.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 </body>
 </html>
