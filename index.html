@@ -11,11 +11,12 @@
   <title>Site</title>
 </head>
 <body>
-<nav id="nav-bar" class="sticky top-0 px-2 bg-red-600 animate__animated animate__backInDown z-50">
+<!-- Start navbar -->
+<nav id="nav-bar" class="sticky top-0 px-2 bg-blue-800 animate__animated animate__backInDown z-50">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
     <a href="#" class="flex items-center">
         <img src="empresa-logo" class="h-6 mr-3 sm:h-10" alt="Empresa Logo" />
-        <span class="self-center text-white text-xl font-semibold whitespace-nowrap">N-L</span>
+        <span class="self-center text-white text-xl font-semibold whitespace-nowrap">N&L - Prestadora de Serviços</span>
     </a>
     <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-white" aria-controls="navbar-dropdown" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
@@ -59,11 +60,37 @@
     </div>
   </div>
 </nav>
+<!-- End navbar -->
 
+<!-- Content page -->
 <div id="bg-home-1" class="fixed w-screen h-screen"></div>
-<div id="bg-home-2" class="fixed w-screen h-screen brightness-50"></div>
-
-<footer class="fixed bottom-0 left-0 z-20 w-full bg-red-600 shadow md:flex md:items-center md:justify-between md:p-2">
+<div id="bg-home-2" class="fixed w-screen h-screen brightness-50">
+</div>
+<main id="home">
+  <section id="content" class="grid grid-cols-2 w-full h-10/12 m-auto mt-6">
+    <div></div>
+    <div class="flex flex-col gap-6">
+      <h1 class="text-4xl text-white font-extrabold">N&L -
+        <small class="ml-2 font-semibold text-white">Prestadora de Serviços</small>
+      </h1>
+      <h2 class="text-2xl text-white font-extrabold"> Um pouco sobre nós:</h2>
+      <ul class="max-w-md space-y-1 text-white list-disc list-inside">
+          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark">
+            Realizamos operações de terraplanagem em geral;
+          </li>
+          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark">
+            Temos grande experiência em operações ligadas a estradas florestais, barragens e terraços; e
+          </li>
+          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark">
+            Atuamos em toda metade Sul do Estado do Rio Grande do Sul.
+          </li>
+      </ul>
+      <button type="button" class="w-4/12 border-solid border-2 border-white text-white hover:text-white hover:backdrop-blur-sm hover:w-8/12 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-2 py-2.5 text-center mr-2 mb-2 transition-all">Conheça nossos serviços</button>
+    </div>
+  </section>
+</main>
+<!-- Start footer -->
+<footer class="fixed bottom-0 left-0 z-20 w-full bg-blue-800 shadow md:flex md:items-center md:justify-between md:p-2">
   <span class="text-sm text-white sm:text-center">© 2023 <a href="#" class="hover:underline">N-L™</a>. Todos os Direitos reservados.
   </span>
   <ul class="flex flex-wrap items-center mt-3 text-sm text-white sm:mt-0">
@@ -75,8 +102,9 @@
       </li>
   </ul>
 </footer>
-
-  <script src="./assets/navbarCollapse.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+<!-- End navbar -->
+<script src="./assets/navbarCollapse.js"></script>
+<script src="./assets/homeChangeBackground.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 </body>
 </html>

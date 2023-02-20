@@ -8,7 +8,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -9999;
-  filter: blur(3px)
+  filter: blur(3px);
+  transition: all 0.6s ease-in-out;
 }
 
 #bg-home-2 {
@@ -18,8 +19,8 @@
   background-size: cover;
   clip-path: polygon(9% 0, 100% 0%, 100% 100%, 64% 100%);
   z-index: -9998;
-  filter: contrast(20%), grayscale(40%);
-  animation: slidein 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both
+  animation: slidein 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
+  transition: all 0.6s ease-in-out;
 }
 
 @keyframes slidein {
@@ -31,5 +32,12 @@
     clip-path: polygon(9% 0, 100% 0%, 100% 100%, 64% 100%);
   }
 }
+
+.backDroppedDark {
+  backdrop-filter: brightness(30%);
+}
+
+
+
 
 
