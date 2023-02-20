@@ -2,6 +2,10 @@
   background-color: #dc2625;
 }
 
+#nav-bar {
+  backdrop-filter: opacity(0.5);
+}
+
 #bg-home-1 {
   background-image: url(../assets/images/trator.jpg);
   background-position: center;
@@ -36,8 +40,4 @@
 .backDroppedDark {
   backdrop-filter: brightness(30%);
 }
-
-
-
-
 
