@@ -4,6 +4,8 @@ import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Fleets from '../pages/Fleets';
 import About from '../pages/About';
+import Services from '../pages/Services';
+import NotFound from '../pages/NotFound';
 
 function Router() {
   return (
@@ -12,6 +14,8 @@ function Router() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
       <Route path="/fleets" element={<Fleets />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
