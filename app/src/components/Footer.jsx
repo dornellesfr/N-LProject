@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -7,15 +8,15 @@ function Footer() {
         className="text-sm text-white sm:text-center"
       >
         © 2023
-        <a href="#" className="hover:underline">N-L™</a>
+        <Link to="/" className="hover:underline">N-L™</Link>
         . Todos os Direitos reservados.
       </span>
       <ul className="flex flex-wrap items-center mt-3 text-sm text-white sm:mt-0">
         <li>
-          <a href="/sobre" className="mr-4 hover:underline md:mr-6 ">Sobre</a>
+          <Link to="/about" className="mr-4 hover:underline md:mr-6 ">Sobre</Link>
         </li>
         <li>
-          <a href="/contato" className="hover:underline">Contato</a>
+          <Link to="/contact" className="hover:underline">Contato</Link>
         </li>
       </ul>
     </footer>
