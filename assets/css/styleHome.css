@@ -1,13 +1,7 @@
-#ul-navbar {
-  background-color: #dc2625;
-}
 
-#nav-bar {
-  backdrop-filter: opacity(0.5);
-}
 
 #bg-home-1 {
-  background-image: url(../assets/images/trator.jpg);
+  background-image: url(../images/bg/73.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,7 +11,7 @@
 }
 
 #bg-home-2 {
-  background-image: url(../assets/images/trator.jpg);
+  background-image: url(../images/bg/73.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
