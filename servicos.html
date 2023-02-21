@@ -14,12 +14,16 @@
 </head>
 <body>
 <!-- Start navbar -->
-<nav id="nav-bar" class="sticky top-0 px-2 bg-blue-800">
+<nav id="nav-bar" class="sticky top-0 px-2">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
     <a href="/" class="flex items-center">
-        <img src="empresa-logo" class="h-6 mr-3 sm:h-10" alt="Empresa Logo" />
+        <img src="./assets/images/logos/NL-Logo.jpeg" class="h-6 mr-3 sm:h-10" alt="Empresa Logo" />
         <span class="self-center text-white text-xl font-semibold whitespace-nowrap">N&L</span>
     </a>
+    <a href="/" class="flex items-center">
+      <img src="./assets/images/logos/Mariana.jpeg" class="h-6 mr-3 sm:h-10" alt="Empresa Logo" />
+      <span class="self-center text-white text-xl font-semibold whitespace-nowrap">Mariana</span>
+  </a>
     <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-white" aria-controls="navbar-dropdown" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -68,40 +72,53 @@
 <!-- End navbar -->
 <!-- Content services page -->
 <div id="bg-services" class="fixed w-screen h-screen overflow-hidden"></div>
-<main id="services" class="flex flex-col overflow-hidden"> 
-  <section id="carousel-1" class="flex w-screen h-screen observed">
+<main id="services" class="flex flex-col items-center mb-24 overflow-hidden md:mb-96"> 
+  <div class="flex flex-col mt-10 items-center w-screen h-screen observed md:flex-row md:mt-0">
+    <section id="carousel-1" class="flex flex-col items-center w-full h-10/12 pt-4 backDroppedDark md:w-10/12 md:flex-row md:pt-0 md:pl-0 md:pr-0">
+      
+    </section>
+    <aside class="w-full h-fit p-4 backDroppedDark text-sm text-white font-bold md:w-1/4 md:h-96 md:text-base lg:text-xl d:w-1/4 md:pr-16">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta similique eos, sed placeat vero debitis iste? Nostrum magnam id, commodi iusto, laborum reiciendis voluptas fugiat provident, ipsum earum sit tenetur?</aside>
+  </div>
+  <div class="flex flex-col mt-10 items-center w-screen h-screen observed md:flex-row md:mt-0">
+    <section id="carousel-2" class="flex flex-col items-center w-full h-10/12 pt-4 backDroppedDark md:w-10/12 md:flex-row md:pt-0 md:pl-0">
 
-  </section>
+    </section>
+    <aside class="w-full h-fit p-4 backDroppedDark text-sm text-white font-bold md:w-1/4 md:h-96 md:text-base lg:text-xl d:w-1/4 md:pr-16">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta similique eos, sed placeat vero debitis iste? Nostrum magnam id, commodi iusto, laborum reiciendis voluptas fugiat provident, ipsum earum sit tenetur?</aside>
+  </div>
+  <div class="flex flex-col mt-10 items-center w-screen h-screen observed md:flex-row md:mt-0">
+    <section id="carousel-3"  class="flex flex-col items-center w-full h-10/12 pt-4 backDroppedDark md:w-10/12 md:flex-row md:pt-0 md:pl-0">
 
-  <section id="carousel-2" class="flex w-screen h-screen observed">
 
-  </section>
+    </section>
+    <aside class="w-full h-fit p-4 backDroppedDark text-sm text-white font-bold md:w-1/4 md:h-96 md:text-base lg:text-xl d:w-1/4 md:pr-16">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta similique eos, sed placeat vero debitis iste? Nostrum magnam id, commodi iusto, laborum reiciendis voluptas fugiat provident, ipsum earum sit tenetur?</aside>
+  </div>
   <div id="videos" class="grid grid-cols-1">
-    <section id="video-1" class="flex justify-center p-10 observed">
-      <video class="flex w-7/12 h-auto max-w-full border border-gray-200 rounded-lg p-4" controls autoplay muted>
+    <section id="video-1" class="flex w-full justify-center p-2 observed md:p-10">
+      <video class="flex w-full h-auto max-w-full border border-gray-200 rounded-lg p-4" controls autoplay muted>
         <source src="./assets/videos/5.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </section>
-    <section id="video-2" class="flex justify-center p-10 observed">
-      <video class="flex w-7/12 h-auto max-w-full border border-gray-200 rounded-lg p-4" controls autoplay muted>
+    <section id="video-2" class="flex justify-center p-2 observed md:p-10">
+      <video class="flex w-full h-auto max-w-full border border-gray-200 rounded-lg p-4 " controls autoplay muted>
         <source src="./assets/videos/1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </section>
-    <section id="video-3" class="flex justify-center  p-10 observed">
-      <video class="flex w-7/12 h-auto max-w-full border border-gray-200 rounded-lg p-4" controls autoplay muted>
+    <section id="video-3" class="flex justify-center  p-2 observed md:p-10">
+      <video class="flex w-full h-auto max-w-full border border-gray-200 rounded-lg p-4 " controls autoplay muted>
         <source src="./assets/videos/3.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </section>
-    <section id="video-4" class="flex justify-center p-10 observed">
-      <video class="flex w-7/12 h-auto max-w-full border border-gray-200 rounded-lg p-4" controls autoplay muted>
+    <section id="video-4" class="flex justify-center p-2 observed md:p-10">
+      <video class="flex w-full h-auto max-w-full border border-gray-200 rounded-lg p-4" controls autoplay muted>
         <source src="./assets/videos/4.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </section>
   </div>
+  <a href="/sobre" id="btn-our-services" class="w-7/12 border-solid border-2 border-white text-white hover:text-white hover:backdrop-blur-sm hover:w-9/12 focus:ring-4 focus:outline-none font-bold rounded-lg text-sm px-2 py-2.5 text-center mt-10 transition-all self-center md:text-3xl md:w-4/12">Conheça mais sobre a empresa</a>
 </main>
 <!-- End content services page -->
 <!-- Start footer -->

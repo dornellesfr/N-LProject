@@ -14,12 +14,16 @@
 </head>
 <body>
 <!-- Start navbar -->
-<nav id="nav-bar" class="sticky top-0 px-2 bg-blue-800">
+<nav id="nav-bar" class="sticky top-0 px-2">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
     <a href="/" class="flex items-center">
-        <img src="empresa-logo" class="h-6 mr-3 sm:h-10" alt="Empresa Logo" />
+        <img src="./assets/images/logos/NL-Logo.jpeg" class="h-6 mr-3 sm:h-10" alt="Empresa Logo" />
         <span class="self-center text-white text-xl font-semibold whitespace-nowrap">N&L</span>
     </a>
+    <a href="/" class="flex items-center">
+      <img src="./assets/images/logos/Mariana.jpeg" class="h-6 mr-3 sm:h-10" alt="Empresa Logo" />
+      <span class="self-center text-white text-xl font-semibold whitespace-nowrap">Mariana</span>
+  </a>
     <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-white" aria-controls="navbar-dropdown" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -71,29 +75,33 @@
 <div id="bg-home-1" class="fixed w-screen h-screen"></div>
 <div id="bg-home-2" class="fixed w-screen h-screen brightness-50">
 </div>
-<main id="home">
+<main id="home" class="mb-60">
   <section id="content" class="grid grid-cols-2 w-full h-10/12 m-auto mt-10">
     <div></div>
     <div class="flex flex-col gap-2 items-center">
       <h1 class="text-4xl text-white font-extrabold">N&L -
         <small class="ml-2 font-semibold text-white">Prestadora de Serviços</small>
       </h1>
-      <h2 class="text-2xl text-white font-extrabold"> Um pouco sobre nós:</h2>
+      <p class="text-xl text-white font-extrabold">&</p>
+      <h1 class="text-4xl text-white font-extrabold">Mariana -
+        <small class="ml-2 font-semibold text-white">Terraplenagem</small>
+      </h1>
+      <h2 class="text-2xl text-white font-extrabold mt-4"> Um pouco sobre nós:</h2>
       <ul class="max-w-md space-y-1 text-white list-disc list-inside">
-          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:border-4 transition-all">
+          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:rounded-lg transition-all">
             Realizamos operações de terraplenagem em geral
           </li>
-          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:border-4 transition-all">
+          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:rounded-lg transition-all">
             Temos grande experiência em operações ligadas a estradas florestais, barragens e terraços
           </li>
-          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:border-4 transition-all">
+          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:rounded-lg transition-all">
             Trabalhamos também com o aluguel de máquinas
           </li>
-          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:border-4 transition-all">
+          <li class="border-solid border-2 border-white rounded mt-4 p-4 backDroppedDark font-bold hover:rounded-lg transition-all">
             Atuamos em toda metade Sul do Estado do Rio Grande do Sul
           </li>
       </ul>
-      <a href="/servicos" id="btn-our-services" class="w-4/12 border-solid border-2 border-white text-white hover:text-white hover:backdrop-blur-sm hover:w-8/12 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-2 py-2.5 text-center mt-10 transition-all">Conheça nossos serviços</a>
+      <a href="/servicos" id="btn-our-services" class="w-8/12 border-solid border-2 border-white text-white hover:text-white hover:backdrop-blur-sm hover:w-10/12 focus:ring-4 focus:outline-none font-medium rounded-lg text-xl px-2 py-2.5 text-center mt-10 transition-all backDroppedDark md:text-3xl md:w-6/12">Conheça nossos serviços</a>
     </div>
   </section>
 </main>
@@ -112,10 +120,10 @@
   </ul>
 </footer>
 <!-- End footer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 <script src="./assets/js/navbar/navbarCollapse.js"></script>
 <script src="./assets/js/navbar/backToTop.js"></script>
 <script src="./assets/js/home-modules/changeBackground.js"></script>
 <script src="./assets/js/home-modules/btnOurServices.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 </body>
 </html>
