@@ -1,3 +1,33 @@
-#ul-navbar {
-  background-color: #dc2625;
+#bg-services {
+  background-image: url(../images/bg/84.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -9999;
+  filter: blur(2px) brightness(.7);
+  transition: all 0.6s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .observed {
+    opacity: 0;
+    transition: all .6s ease-in-out;
+  }
+  .observed.show {
+    opacity: 1;
+  }
+}
+
+@media (max-height: 600px) {
+  .observed {
+    opacity: 1;
+    transition: all .6s ease-in-out;
+  }
+  .observed.show {
+    opacity: 1;
+  }
+}
+
+.backDroppedDark {
+  backdrop-filter: brightness(30%);
 }
