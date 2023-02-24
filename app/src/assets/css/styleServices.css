@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: #131312;
-  padding: 25px 20px;
+  padding: 25px 50px;
   opacity: 0.8;
   border-radius: 4px;
 }
@@ -28,6 +28,10 @@
   padding: 20px;
   place-self: center;
   text-align: center;
+}
+
+#services {
+  margin-top: 80px;
 }
 
 

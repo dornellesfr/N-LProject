@@ -11,7 +11,7 @@ function Home() {
   const allBgs = [img1, img2, img3, img4];
 
   useEffect(() => {
-    const TIME_TO_CHANGE = 6 * 1000;
+    const TIME_TO_CHANGE = 5 * 1000;
     const intervalId = setInterval(() => {
       setBgIndex((prevIndex) => (prevIndex + 1) % allBgs.length);
     }, TIME_TO_CHANGE);
