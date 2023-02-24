@@ -13,20 +13,11 @@ import img4 from '../assets/images/servicos/4.jpg';
 import img6 from '../assets/images/servicos/6.jpg';
 
 function Carousel1() {
+  const slide = [img73, img84, img53, img14, img54, img11, img13, img30, img1, img4, img6];
   return (
-    <div className="h-56 sm:h-52 xl:h-80 2xl:h-100">
+    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
       <Carou slideInterval={5000}>
-        <img src={img73} alt="..." />
-        <img src={img84} alt="..." />
-        <img src={img53} alt="..." />
-        <img src={img14} alt="..." />
-        <img src={img54} alt="..." />
-        <img src={img11} alt="..." />
-        <img src={img13} alt="..." />
-        <img src={img30} alt="..." />
-        <img src={img1} alt="..." />
-        <img src={img4} alt="..." />
-        <img src={img6} alt="..." />
+        { slide.map((img) => <img src={img} alt="..." />) }
       </Carou>
     </div>
   );
