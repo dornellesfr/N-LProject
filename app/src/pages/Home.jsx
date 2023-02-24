@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../assets/css/styleHome.css';
 import { Link } from 'react-router-dom';
+import img1 from '../assets/images/bg/84.jpg';
+import img2 from '../assets/images/bg/53.jpg';
+import img3 from '../assets/images/bg/40.jpg';
+import img4 from '../assets/images/bg/73.jpg';
 
 function Home() {
+  const [bgIndex, setBgIndex] = useState(0);
+  const allBgs = [img1, img2, img3, img4];
+
+  useEffect(() => {
+    const TIME_TO_CHANGE = 5 * 1000;
+    const intervalId = setInterval(() => {
+      setBgIndex((prevIndex) => (prevIndex + 1) % allBgs.length);
+    }, TIME_TO_CHANGE);
+    return () => clearInterval(intervalId);
+  }, [bgIndex]);
+
   return (
     <>
-      <div id="bg-home-1" className="fixed w-screen h-screen" />
-      <div id="bg-home-2" className="fixed w-screen h-screen brightness-50" />
+      <div id="bg-home-1" style={{ backgroundImage: `url('${allBgs[bgIndex]}')` }} className="fixed w-screen h-screen" />
+      <div id="bg-home-2" style={{ backgroundImage: `url('${allBgs[bgIndex]}')` }} className="fixed w-screen h-screen brightness-50" />
       <main id="home">
         <section id="content" className="grid grid-cols-2 w-full h-10/12 m-auto mt-10">
           <div />
