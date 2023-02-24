@@ -1,8 +1,10 @@
 import React from 'react';
+import Background from '../components/Background';
+import bg from '../assets/images/bg/40.jpg';
 
 function About() {
   return (
-    <h1>Sobre</h1>
+    <Background img={bg} />
   );
 }
 
