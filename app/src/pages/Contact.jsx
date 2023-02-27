@@ -1,10 +1,7 @@
 import React from 'react';
-import Localization from '../components/Localization';
 
 function Contact() {
-  return (
-    <Localization />
-  );
+  return <div>oi</div>;
 }
 
 export default Contact;
