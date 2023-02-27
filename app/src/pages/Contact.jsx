@@ -1,8 +1,9 @@
 import React from 'react';
+import Localization from '../components/Localization';
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <Localization />
   );
 }
 

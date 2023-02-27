@@ -26,7 +26,7 @@ function About() {
         <div className="content-text">
           <section className="animate__animated animate__bounceInLeft history-1">
             <h2 className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap">História da empresa</h2>
-            <p className="text-white text-lg lg:text-xl md:text-lg font-bold">
+            <p className="text-white text-base lg:text-xl md:text-lg font-bold">
               A N&L prestadora de Serviços Ltda foi constituída
               em 2013, na cidade de Taquari, pelo sócio
               proprietário Marcelo Vieira Rocha.
@@ -44,7 +44,6 @@ function About() {
             </p>
           </section>
           <section className="animate__animated animate__bounceInRight history-2">
-            <h2 className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap">História da empresa</h2>
             <p className="text-white text-base lg:text-xl md:text-lg font-bold">
               Em 2014, decidimos investir em uma escavadeira hidráulica
               para atender aos amigos e clientes da área da agricultura,
@@ -53,9 +52,20 @@ function About() {
               máquinas e mudança da família para esta cidade.
             </p>
             <p className="text-white text-base lg:text-xl md:text-lg font-bold">
-              A empresa Mariana Terraplanagem foi criada para atuar em
-              conjunto com a N&L, com o objetivo de complementar seus serviços,
+              A empresa Mariana Terraplanagem, que tem como nome a terceira
+              filha do casal, foi criada com a intenção de complementar os serviços da
+              N&L, com o objetivo de complementar seus serviços,
               que envolvem a realização de obras utilizando o maquinário já mencionado.
+            </p>
+          </section>
+          <section className="animate__animated animate__bounceInLeft history-3">
+            <p className="text-white text-base lg:text-xl md:text-lg font-bold">
+              Na sequência as empresas foram se desenvolvendo e se
+              aperfeiçoando na área de abertura e manutenção de
+              estradas no setor florestal. Hoje conta com
+              colaboradores capacitados e máquinas adequadas
+              para o setor, que é muito importante para a
+              economia da região.
             </p>
           </section>
 
