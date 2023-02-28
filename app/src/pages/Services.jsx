@@ -1,28 +1,62 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Carousel1 from '../components/Carousel1';
-import Carousel2 from '../components/Carousel2';
+import Carousel from '../components/Carousel';
 import Background from '../components/Background';
-import '../assets/css/styleServices.css';
+import Title from '../components/Title';
 import video5 from '../assets/videos/5.mp4';
 import video1 from '../assets/videos/1.mp4';
-import video3 from '../assets/videos/3.mp4';
-import video4 from '../assets/videos/4.mp4';
+import bg from '../assets/images/bg/84.jpg';
+import img73 from '../assets/images/servicos/73.jpg';
+import img84 from '../assets/images/servicos/84.jpg';
+import img53 from '../assets/images/servicos/53.jpg';
+import img14 from '../assets/images/servicos/14.jpg';
+import img54 from '../assets/images/servicos/54.jpg';
+import img11 from '../assets/images/servicos/11.jpg';
+import img13 from '../assets/images/servicos/13.jpg';
+import img30 from '../assets/images/servicos/30.jpg';
+import img1 from '../assets/images/servicos/1.jpg';
+import img4 from '../assets/images/servicos/4.jpg';
+import img6 from '../assets/images/servicos/6.jpg';
+import img40 from '../assets/images/bg/40.jpg';
+import img15 from '../assets/images/servicos/15.jpg';
+import img16 from '../assets/images/servicos/16.jpg';
+import img18 from '../assets/images/servicos/18.jpg';
+import img19 from '../assets/images/servicos/19.jpg';
+import img22 from '../assets/images/servicos/22.jpg';
+import img21 from '../assets/images/servicos/21.jpg';
+import img87 from '../assets/images/servicos/87.jpg';
+import img34 from '../assets/images/servicos/34.jpg';
+import img38 from '../assets/images/servicos/38.jpg';
+import img55 from '../assets/images/servicos/55.jpg';
+import '../assets/css/styleServices.css';
 
 function Services() {
+  const firstSlide = [img73, img84, img53, img14, img54, img11, img13, img30, img1, img4, img6];
+  const secondSlide = [img40, img15, img16, img18, img19, img22, img21, img87, img34, img38, img55];
+
+  function setToTopFunc() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
+
+  useEffect(() => {
+    setToTopFunc();
+  }, []);
+
   return (
     <>
-      <Background />
+      <Background img={bg} />
       <main className="main-content">
-        <div className="title">
-          <h1 className="text-white text-3xl lg:text-4xl md:text-4xl font-sans whitespace-nowrap">Serviços</h1>
-        </div>
+        <Title titlePage="Serviços" />
         <section className="animate__animated animate__bounceInLeft container-first-carousel text-white text-base lg:text-xl md:text-lg font-bold whitespace-nowrap">
           <div className="justify-center first-carousel">
-            <Carousel1 />
+            <Carousel imgs={firstSlide} />
           </div>
           <ul className="list">
-            <li>A nossa frota é constituída por:</li>
+            <li><h2> A nossa frota é constituída por:</h2></li>
             <li>2 Escavadeiras hidráulicas;</li>
             <li>2 Retroescavadeiras;</li>
             <li>2 Patrolas;</li>
@@ -33,12 +67,12 @@ function Services() {
         </section>
         <section className="animate__animated animate__bounceInRight container-first-carousel text-white text-base lg:text-xl md:text-lg font-bold whitespace-nowrap">
           <div className="justify-center first-carousel">
-            <Carousel2 />
+            <Carousel imgs={secondSlide} />
           </div>
           <ul className="list">
             <li>Nosos principais Clientes:</li>
             <li>Southern Forest;</li>
-            <li>Sul Agroflorestal Ltda- Bagé;</li>
+            <li>Sul Agroflorestal Ltda - Bagé;</li>
             <li>Terra Brazil;</li>
             <li>Silveirado;</li>
             <li>Tanac, Tanagro;</li>
@@ -56,18 +90,6 @@ function Services() {
             <section id="video-2" className="flex justify-center p-2 md:p-10">
               <video className="flex w-full h-auto max-w-full border border-gray-200 rounded-lg p-4 " controls autoPlay muted>
                 <source src={video1} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </section>
-            <section id="video-3" className="flex justify-center p-2 md:p-10">
-              <video className="flex w-full h-auto max-w-full border border-gray-200 rounded-lg p-4 " controls autoPlay muted>
-                <source src={video3} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </section>
-            <section id="video-4" className="flex justify-center p-2 md:p-10">
-              <video className="flex w-full h-auto max-w-full border border-gray-200 rounded-lg p-4" controls autoPlay muted>
-                <source src={video4} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </section>
