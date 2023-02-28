@@ -77,16 +77,18 @@ function About() {
         </div>
         <div className="machines-part">
           <section className="machines-content">
-            <h2 className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap">Máquinas</h2>
-            <ul className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap list">
-              <li className="text-xl lg:text-3xl md:text-2xl"><h2> A nossa frota é constituída por:</h2></li>
-              <li className="text-lg lg:text-xl md:text-lg">2 Escavadeiras hidráulicas;</li>
-              <li className="text-xl lg:text-xl md:text-xl">2 Retroescavadeiras;</li>
-              <li className="text-xl lg:text-xl md:text-xl">2 Patrolas;</li>
-              <li className="text-xl lg:text-xl md:text-xl">2 Caçambas traçadas;</li>
-              <li className="text-xl lg:text-xl md:text-xl">1 Caminhão prancha;</li>
-              <li className="text-xl lg:text-xl md:text-xl">Além de 3 veículos de apoio.</li>
-            </ul>
+            <article>
+              <h2 className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap">Máquinas</h2>
+              <ul className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap list">
+                <li className="text-xl lg:text-3xl md:text-2xl"><h2> A nossa frota é constituída por:</h2></li>
+                <li className="text-lg lg:text-xl md:text-lg">2 Escavadeiras hidráulicas;</li>
+                <li className="text-xl lg:text-xl md:text-xl">2 Retroescavadeiras;</li>
+                <li className="text-xl lg:text-xl md:text-xl">2 Patrolas;</li>
+                <li className="text-xl lg:text-xl md:text-xl">2 Caçambas traçadas;</li>
+                <li className="text-xl lg:text-xl md:text-xl">1 Caminhão prancha;</li>
+                <li className="text-xl lg:text-xl md:text-xl">Além de 3 veículos de apoio.</li>
+              </ul>
+            </article>
             <img className="img-machine" src={img10} alt="machine" />
             <img className="img-machine" src={img12} alt="machine" />
             <img className="img-machine" src={img13} alt="machine" />
@@ -101,7 +103,7 @@ function About() {
           </section>
         </div>
         <section className="contact-us">
-          <Link to="/contact" id="btn-our-services" className="button w-7/12 border-solid border-2 border-white text-white hover:text-white hover:backdrop-blur-sm hover:w-9/12 focus:ring-4 focus:outline-none font-bold rounded-lg text-sm px-2 py-2.5 text-center mt-10 transition-all self-center md:text-3xl md:w-4/12">Entre em contato conosco!</Link>
+          <Link to="/contact" id="btn-our-services" className="w-7/12 border-solid border-2 border-white text-white hover:text-white hover:backdrop-blur-sm hover:w-9/12 focus:ring-4 focus:outline-none font-bold rounded-lg text-lg px-2 py-2.5 text-center mt-10 transition-all self-center md:text-3xl md:w-4/12">Entre em contato conosco!</Link>
         </section>
       </main>
     </>
