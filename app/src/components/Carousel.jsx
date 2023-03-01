@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes, { number } from 'prop-types';
 import { Carousel as Carou } from 'flowbite-react';
+import '../assets/css/styleCarousel.css';
 
 function Carousel({ imgs }) {
   return (
-    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+    <div className="carousel">
       <Carou slideInterval={5000}>
         { imgs.map((img) => <img key={imgs} src={img} alt="..." />) }
       </Carou>
