@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import Background from '../components/Background';
 import bg from '../assets/images/bg/40.jpg';
 import Title from '../components/Title';
-import '../assets/css/styleAbout.css';
 import img10 from '../assets/images/servicos/10.jpg';
 import img12 from '../assets/images/servicos/12.jpg';
 import img13 from '../assets/images/servicos/13.jpg';
 import img1 from '../assets/images/equipe/1.jpg';
 import img2 from '../assets/images/equipe/2.jpg';
 import img3 from '../assets/images/equipe/3.jpg';
+import '../assets/css/styleAbout.css';
 
 function About() {
   function setToTopFunc() {
