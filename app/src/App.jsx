@@ -9,11 +9,6 @@ function App() {
       <Navbar />
       <Router />
       <Footer />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js" />
-      <script src="./assets/js/navbar/navbarCollapse.js" />
-      <script src="./assets/js/navbar/backToTop.js" />
-      <script src="./assets/js/home-modules/changeBackground.js" />
-      <script src="./assets/js/home-modules/btnOurServices.js" />
     </>
   );
 }
