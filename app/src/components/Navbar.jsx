@@ -3,16 +3,9 @@ import { Link } from 'react-router-dom';
 import '../assets/css/styleNavbar.css';
 import logoNL from '../assets/images/logos/NL-Logo.jpeg';
 import mariana from '../assets/images/logos/Mariana.jpeg';
+import backToTop from '../utils/backToTop';
 
 function Navbar() {
-  function setToTopFunc() {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
-  }
-
   return (
     <nav id="nav-bar" className="sticky top-0 px-2">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
@@ -43,9 +36,8 @@ function Navbar() {
               <Link to="/contact" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0">Contato</Link>
             </li>
             <li>
-              <button id="to-top-anchor" onClick={(event) => setToTopFunc(event)} className="m-auto w-full text-white bg-red-700 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center flex justify-center " type="button">
+              <button id="to-top-anchor" onClick={(event) => backToTop(event)} className="m-auto w-full text-white bg-red-700 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center flex justify-center " type="button">
                 Retornar
-                <svg className="w-4 h-4 ml-2 rotate-180" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
               </button>
             </li>
           </ul>

@@ -1,3 +1,81 @@
-.carousel {
+.image-container-carousel
+{
   height: 50vh;
+  margin-top: 10vh;
+}
+
+@media (max-width: 768px) {
+  .image-container-carousel
+  {
+  height: 35vh;
+  margin-top: 5vh;
+  margin-bottom: 20vh;
+  gap: 5px;
+  padding: 5px;
+  }
+}
+
+figcaption {
+  text-shadow: 0px 2px 2px rgba(0,0,0,0.8);
+}
+
+div[data-testid=carousel] {
+  -webkit-animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+	animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+}
+
+ @-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.aside-photo {
+  -webkit-animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+	animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
+}
+
+ @-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }

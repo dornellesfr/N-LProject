@@ -1,75 +1,52 @@
-.main-content {
-  display: grid;
-  gap: 20px;
+#bg-services-1 {
+  background-image: url(../images/servicos/84.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -9999;
+  filter: blur(2px) brightness(.6);
+  transition: all 0.6s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
 }
 
-.container-first-carousel {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto;
-  background-color: #131312;
-  padding: 5px 50px;
-  opacity: 0.8;
-  border-radius: 4px;
+.backDroppedDark {
+  backdrop-filter: brightness(30%);
 }
 
-.first-carousel {
-  place-items: end;
+#btn-our-services {
+  transition: all 0.8s ease-in-out;
 }
 
-.list {
-  grid-column: 2;
-  padding: 15px 10px;
-  text-align: center;
-  align-self: center;
+#service-title,
+#service-subtitle {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.6s both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.6s both;
+  text-shadow: 0px 2px 2px rgba(0,0,0,0.6);
 }
 
-#services {
-  margin-top: 80px;
-}
-
-/* telas médias */
-@media (max-width: 1024px ) and (min-width: 767px) {
-  .container-first-carousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #131312;
-    padding: 5px;
-    opacity: 0.8;
-    border-radius: 4px;
+ @-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
   }
-
-  .first-carousel {
-    grid-column: 1 / -1;
-  }
-  
-  .list {
-    grid-column: 1 / -1;
-    padding: 20px 10px;
-    place-self: center;
-    text-align: center;
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
   }
 }
-
-/* telas pequenas */
-@media (max-width: 766px) {
-  .container-first-carousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #131312;
-    padding: 5px;
-    opacity: 0.8;
-    border-radius: 4px;
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
   }
-
-  .first-carousel {
-    grid-column: 1 / -1;
-  }
-  
-  .list {
-    grid-column: 1 / -1;
-    padding: 20px 10px;
-    place-self: center;
-    text-align: center;
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
   }
 }

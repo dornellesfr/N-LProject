@@ -1,9 +1,38 @@
 #ul-navbar {
-  /* background-color: #F20505; */
   background-color: #00339C;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+#ul-navbar ul {
+  align-items: center;
+}
+
+#ul-navbar ul a {
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  #ul-navbar ul a:hover {
+    background-color: #00339C;
+    border-radius: 5px;
+  }
+}
+
+#info-bar {
+  z-index: 9999999999999;
+  background-color: #F2F2F2;
 }
 
 #nav-bar {
   z-index: 9999999999999;
   background-color: #00339C;
+  padding: 0;
+  align-items: center;
+}
+
+#btn-return {
+  background-color: #F20505;
+  margin-right: 15px;
 }
