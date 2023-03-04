@@ -13,13 +13,6 @@
   border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-  #ul-navbar ul a:hover {
-    background-color: #00339C;
-    border-radius: 5px;
-  }
-}
-
 #info-bar {
   z-index: 9999999999999;
   background-color: #F2F2F2;
@@ -33,6 +26,17 @@
 }
 
 #btn-return {
-  background-color: #F20505;
+  background-color: #de0707;
   margin-right: 15px;
 }
+
+@media (max-width: 768px) {
+  #ul-navbar ul a:hover {
+    background-color: #00339C;
+    border-radius: 5px;
+  }
+  #info-bar li {
+    font-size: 12px;
+  }
+}
+
