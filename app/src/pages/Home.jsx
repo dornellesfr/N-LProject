@@ -1,7 +1,6 @@
 import React from 'react';
 import '../assets/css/styleHome.css';
 import { Link } from 'react-router-dom';
-import { Button } from 'flowbite-react';
 
 export default class MyContent extends React.Component {
   constructor(props) {
@@ -22,9 +21,7 @@ export default class MyContent extends React.Component {
             <div id="home-card" />
             <div className="flex justify-center items-center">
               <Link to="/services" className="flex justify-center items-center">
-                <Button id="home-btn-know-services" className="text-white mt-8">
-                  Conheça nossos serviços
-                </Button>
+                <button id="home-btn-know-services" type="button" className="text-white mt-8 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-4 mr-2 mb-2 focus:outline-none">Conheça nossos serviços</button>
               </Link>
             </div>
           </section>

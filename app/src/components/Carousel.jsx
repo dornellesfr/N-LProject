@@ -40,7 +40,7 @@ class MyCarousel extends React.Component {
 
 MyCarousel.propTypes = {
   id: PropTypes.string.isRequired,
-  items: PropTypes.element.isRequired,
+  items: PropTypes.instanceOf(Array).isRequired,
   text: PropTypes.string.isRequired,
 };
 
