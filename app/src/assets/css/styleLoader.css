@@ -1,0 +1,9 @@
+#spinner-load {
+  background-image: url(https://media.tenor.com/images/d6cd5151c04765d1992edfde14483068/tenor.gif);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50px, -50px);
+}

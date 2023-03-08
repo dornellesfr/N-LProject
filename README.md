@@ -1,6 +1,0 @@
-# ROTAS:
-
-### HOME
-### CONTATO
-### SOBRE NÓS
-### FROTA

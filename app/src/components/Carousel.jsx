@@ -18,7 +18,7 @@ class MyCarousel extends React.Component {
   render() {
     const { id, items, text } = this.props;
     return (
-      <div id={id} className="observed image-container-carousel flex flex-col m-auto gap-6 w-full md:flex-row md:w-11/12">
+      <div id={id} className="image-container-carousel flex flex-col m-auto gap-6 w-full md:flex-row md:w-11/12">
         <Carousel slideInterval={5000}>
           {items.map(
             (item) => (
@@ -40,7 +40,7 @@ class MyCarousel extends React.Component {
 
 MyCarousel.propTypes = {
   id: PropTypes.string.isRequired,
-  items: PropTypes.element.isRequired,
+  items: PropTypes.instanceOf(Array).isRequired,
   text: PropTypes.string.isRequired,
 };
 
