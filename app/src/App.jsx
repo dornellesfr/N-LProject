@@ -1,12 +1,12 @@
 import React from 'react';
 import Router from './components/Router';
-import MyNavbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <>
-      <MyNavbar />
+      <Navbar />
       <Router />
       <Footer />
     </>
