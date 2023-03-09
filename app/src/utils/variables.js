@@ -5,62 +5,34 @@ export const CAROUSELS = [
   {
     id: 'carousel-1',
     items: [
-      {
-        url: assets.img1,
-        message: 'Trabalhamos na construção de estradas rurais',
-      },
-      {
-        url: assets.img1,
-        message: 'Mais um de nossos serviços',
-      },
-      {
-        url: assets.img1,
-        message: 'Outro serviço prestado na construção de estradas rurais',
-      },
-      {
-        url: assets.img1,
-        message: 'A empresa possui diversos veículos em sua frota',
-      },
-      {
-        url: assets.img1,
-        message: 'Buscamos sempre a satisfação do cliente',
-      },
-      {
-        url: assets.img1,
-        message: 'Mais alguns veículos que compõem nossa frota',
-      },
-      {
-        url: assets.img1,
-        message: 'Nosso objetivo é buscar o acesso a todas as localidades',
-      },
-      { url: assets.img1, message: '' },
-      {
-        url: assets.img1,
-        message: 'Soluções adequadas às necessidades dos clientes',
-      },
-      {
-        url: assets.img1,
-        message: 'Atuamos também na construção de pontes',
-      },
+      { url: assets.img9, message: '' },
+      { url: assets.img7, message: '' },
+      { url: assets.img14, message: '' },
+      { url: assets.img11, message: '' },
+      { url: assets.img15, message: '' },
+      { url: assets.img18, message: '' },
+      { url: assets.img20, message: '' },
+      { url: assets.img23, message: '' },
+      { url: assets.img25, message: '' },
     ],
     number: 1,
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta similique eos, sed placeat vero debitis iste? Nostrum magnam id, commodi iusto, laborum reiciendis voluptas fugiat provident, ipsum earum sit tenetur?',
+    text: 'Temos como clientes renomadas empresas do ramo florestal e agricultores da região. Contamos com maquinários amplo para realização de diversos serviços. Sendo alguns deles: Construção, limpeza e reformas de açudes, construção de barragens, abertura e manuntenção de estradas florestais e rodiviárias, abertura e limpeza de valas, destoca e drenagem de terrenos.',
   },
   {
     id: 'carousel-2',
     items: [
-      { url: assets.img1, message: '' },
-      { url: assets.img1, message: '' },
-      { url: assets.img1, message: '' },
-      { url: assets.img1, message: '' },
-      { url: assets.img1, message: '' },
-      { url: assets.img1, message: '' },
-      { url: assets.img1, message: '' },
-      { url: assets.img1, message: '' },
+      { url: assets.img26, message: '' },
+      { url: assets.img27, message: '' },
+      { url: assets.img28, message: '' },
+      { url: assets.img31, message: '' },
+      { url: assets.img29, message: '' },
+      { url: assets.img34, message: '' },
+      { url: assets.img35, message: '' },
+      { url: assets.img36, message: '' },
       { url: assets.img1, message: '' },
     ],
     number: 2,
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta similique eos, sed placeat vero debitis iste? Nostrum magnam id, commodi iusto, laborum reiciendis voluptas fugiat provident, ipsum earum sit tenetur?',
+    text: 'Além de prestar serviços, também, alugamos nossas máquinas de alta qualidade para outras pessoas ou empresa.',
   },
 ];
 
