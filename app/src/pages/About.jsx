@@ -2,14 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Background from '../components/Background';
 import bg from '../assets/images/bg/40.jpg';
-import Title from '../components/Title';
-import img10 from '../assets/images/servicos/10.jpg';
-import img12 from '../assets/images/servicos/12.jpg';
-import img13 from '../assets/images/servicos/13.jpg';
-import img1 from '../assets/images/equipe/1.jpg';
-import img2 from '../assets/images/equipe/2.jpg';
-import img3 from '../assets/images/equipe/3.jpg';
 import '../assets/css/styleAbout.css';
+import assets from '../utils/images';
 
 function About() {
   function setToTopFunc() {
@@ -27,7 +21,7 @@ function About() {
   return (
     <>
       <Background img={bg} />
-      <Title titlePage="Sobre" />
+      <h1 id="service-title" className="mb-2 text-4xl font-extrabold leading-none tracking-wide text-white md:text-5xl lg:text-6xl p-3 md:p-10">Um pouco sobre nós</h1>
       <main>
         <div className="content-text">
           <section className="animate__animated animate__bounceInLeft history-1">
@@ -60,8 +54,8 @@ function About() {
             <p className="text-white text-base lg:text-xl md:text-lg font-bold">
               A empresa Mariana Terraplanagem, que tem como nome a terceira
               filha do casal, foi criada com a intenção de complementar os serviços da
-              N&L, com o objetivo de complementar seus serviços,
-              que envolvem a realização de obras utilizando o maquinário já mencionado.
+              N&L, que envolvem a realização de obras utilizando o maquinário para construção
+              e manutenção de estradas e rodovias.
             </p>
           </section>
           <section className="animate__animated animate__bounceInLeft history-3">
@@ -77,33 +71,25 @@ function About() {
         </div>
         <div className="machines-part">
           <section className="machines-content">
-            <article>
-              <h2 className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap">Máquinas</h2>
-              <ul className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap list">
-                <li className="text-xl lg:text-3xl md:text-2xl"><h2> A nossa frota é constituída por:</h2></li>
-                <li className="text-lg lg:text-xl md:text-lg">2 Escavadeiras hidráulicas;</li>
-                <li className="text-xl lg:text-xl md:text-xl">2 Retroescavadeiras;</li>
-                <li className="text-xl lg:text-xl md:text-xl">2 Patrolas;</li>
-                <li className="text-xl lg:text-xl md:text-xl">2 Caçambas traçadas;</li>
-                <li className="text-xl lg:text-xl md:text-xl">1 Caminhão prancha;</li>
-                <li className="text-xl lg:text-xl md:text-xl">Além de 3 veículos de apoio.</li>
-              </ul>
-            </article>
-            <img className="img-machine" src={img10} alt="machine" />
-            <img className="img-machine" src={img12} alt="machine" />
-            <img className="img-machine" src={img13} alt="machine" />
+            <h2 className="text-white text-xl lg:text-3xl md:text-2xl font-bold">Atualmente contamos com um vasto maquinário para realização de obras.</h2>
+            <img className="img-machine" src={assets.img3} alt="machine" />
+            <img className="img-machine" src={assets.img4} alt="machine" />
+            <img className="img-machine" src={assets.img5} alt="machine" />
+            <img className="img-machine" src={assets.img6} alt="machine" />
+            <img className="img-machine" src={assets.img14} alt="machine" />
+            <img className="img-machine" src={assets.img18} alt="machine" />
           </section>
         </div>
         <div className="team-part">
           <section className="team-content">
             <h2 className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap">Nossa equipe</h2>
-            <img className="img-team" src={img1} alt="machine" />
-            <img className="img-team" src={img2} alt="machine" />
-            <img className="img-team" src={img3} alt="machine" />
+            <img className="img-team" src={assets.img39} alt="machine" />
+            <img className="img-team" src={assets.img38} alt="machine" />
+            <img className="img-team" src={assets.img37} alt="machine" />
           </section>
         </div>
         <section className="contact-us">
-          <Link to="/contact" id="btn-our-services" className="w-7/12 border-solid border-2 border-white text-white hover:text-white hover:backdrop-blur-sm hover:w-9/12 focus:ring-4 focus:outline-none font-bold rounded-lg text-lg px-2 py-2.5 text-center mt-10 transition-all self-center md:text-3xl md:w-4/12">Entre em contato conosco!</Link>
+          <Link to="/contact" id="btn-our-services" className="border-solid border-2 border-white text-white hover:backdrop-blur-sm focus:ring-4 focus:outline-none font-bold rounded-lg text-sm px-20 py-2.5 text-center hover:px-32 mt-10 self-center md:text-3xl md:hover:px-96">Fale conosco</Link>
         </section>
       </main>
     </>

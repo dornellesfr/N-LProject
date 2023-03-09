@@ -6,8 +6,7 @@ import logoNL from '../assets/images/logos/NL-Logo.jpeg';
 import mariana from '../assets/images/logos/Mariana.jpeg';
 import backToTop from '../utils/backToTop';
 
-// export default Navbar;
-export default class MyNavbar extends React.Component {
+class MyNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -19,10 +18,10 @@ export default class MyNavbar extends React.Component {
         <div id="info-bar" className="sticky top-0 bg-white h-10 font-sm flex flex-row items-center justify-center md:h-6 px-1">
           <ul className=" text-gray-500 text-sm list-none flex flex-row gap-1 md:gap6">
             <li>
-              (51)98855-2211
+              (51) 99584-9857
             </li>
             <li>
-              seila_ok@gmail.com
+              servicos.nlterraplanagem@gmail.com
             </li>
             <li className="flex flex-row gap-2 items-center">
               <Link to="/" className="flex flex-row gap-2 items-center">
@@ -80,7 +79,8 @@ export default class MyNavbar extends React.Component {
                 as={NavLink}
                 to="/"
                 active
-                className="text-white items-center"
+                className="text-white items-center text-white"
+                id="home-button-navbar"
               >
                 Home
               </Navbar.Link>
@@ -100,3 +100,5 @@ export default class MyNavbar extends React.Component {
     );
   }
 }
+
+export default MyNavbar;

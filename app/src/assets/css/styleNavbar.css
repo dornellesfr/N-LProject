@@ -9,6 +9,14 @@
   align-items: center;
 }
 
+#ul-navbar ul a:hover {
+  color: #de0707;
+}
+
+#home-button-navbar {
+  color: white;
+}
+
 #ul-navbar ul a {
   border-radius: 5px;
 }
