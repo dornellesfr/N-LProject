@@ -24,4 +24,6 @@ function Home() {
   );
 }
 
+// comment
+
 export default Home;
