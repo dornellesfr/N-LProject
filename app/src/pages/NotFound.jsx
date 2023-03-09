@@ -1,8 +1,9 @@
 import React from 'react';
+import Localization from '../components/Localization';
 
 function NotFound() {
   return (
-    <h1>NotFound</h1>
+    <Localization />
   );
 }
 
