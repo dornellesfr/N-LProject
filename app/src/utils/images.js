@@ -34,7 +34,10 @@ import img33 from '../assets/images/servicos/33.jpg';
 import img34 from '../assets/images/servicos/34.jpg';
 import img35 from '../assets/images/servicos/35.jpg';
 import img36 from '../assets/images/servicos/36.jpg';
-import img37 from '../assets/images/servicos/37.jpg';
+import img37 from '../assets/images/equipe/1.jpg';
+import img38 from '../assets/images/equipe/2.jpg';
+import img39 from '../assets/images/equipe/3.jpg';
+
 import video1 from '../assets/videos/1.mp4';
 import video2 from '../assets/videos/2.mp4';
 
@@ -76,6 +79,8 @@ const assets = {
   img35,
   img36,
   img37,
+  img38,
+  img39,
   video1,
   video2,
 };
