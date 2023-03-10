@@ -27,15 +27,15 @@ export default class Form extends React.Component {
     });
   };
 
-  sendEmail = (e) => {
+  sendEmail = async (e) => {
     e.preventDefault();
 
     const {
       clientName, clientSurname, clientEmail, clientMessage,
     } = this.state;
 
-    if (clientName.length < 6) {
-      window.alert('Necessário o campo nome maior que 6 caracteres');
+    if (clientName === '') {
+      window.alert('Necessário preencher o campo nome');
       return;
     }
     if (clientSurname === '') {
@@ -56,10 +56,21 @@ export default class Form extends React.Component {
       email: clientEmail,
     };
 
-    emailjs.send(process.env.REACT_APP_SERVICE_ID, 'template_392dpvp', templateParams, process.env.REACT_APP_API_EMAIL)
-      .then(() => {
+    const API_SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+    const API_EMAIL = process.env.REACT_APP_API_EMAIL;
 
+    try {
+      const email = await emailjs.send(API_SERVICE_ID, 'template_392dpvp', templateParams, API_EMAIL);
+      window.alert(email.status);
+      this.setState({
+        clientName: '',
+        clientSurname: '',
+        clientEmail: '',
+        clientMessage: '',
       });
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   render() {
