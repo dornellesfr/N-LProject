@@ -1,29 +1,65 @@
+/* eslint-disable no-alert */
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import '../assets/css/styleForm.css';
+import emailjs from '@emailjs/browser';
 import {
   Label, TextInput, Button, Textarea,
 } from 'flowbite-react';
+import checkEmail from '../utils/checkEmail';
 
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      clientName: '',
+      clientSurname: '',
+      clientEmail: '',
+      clientMessage: '',
+    };
   }
 
-  handleInputChange = (e) => {
-    if (e.target.name === 'clientName') {
-      this.setState({ clientName: e.target.value });
+  handleChange = ({ target }) => {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  sendEmail = (e) => {
+    e.preventDefault();
+
+    const {
+      clientName, clientSurname, clientEmail, clientMessage,
+    } = this.state;
+
+    if (clientName.length < 6) {
+      window.alert('Necessário o campo nome maior que 6 caracteres');
+      return;
     }
-    if (e.target.name === 'clientSurname') {
-      this.setState({ clientSurname: e.target.value });
+    if (clientSurname === '') {
+      window.alert('Necessário o campo sobrenome');
+      return;
     }
-    if (e.target.name === 'clientEmail') {
-      this.setState({ clientEmail: e.target.value });
+    if (!checkEmail(clientEmail)) {
+      window.alert('Necessário um endereço de email válido');
+      return;
     }
-    if (e.target.name === 'clientMessage') {
-      this.setState({ clientMessage: e.target.value });
+    if (clientMessage === '') {
+      window.alert('Necessário o campo nome');
     }
+
+    const templateParams = {
+      from_name: `${clientName} ${clientSurname}`,
+      message: clientMessage,
+      email: clientEmail,
+    };
+
+    emailjs.send(process.env.REACT_APP_SERVICE_ID, 'template_392dpvp', templateParams, process.env.REACT_APP_API_EMAIL)
+      .then(() => {
+
+      });
   };
 
   render() {
@@ -50,7 +86,7 @@ export default class Form extends React.Component {
             required
             value={clientName}
             name="clientName"
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
           />
           <div className="mb-2 block">
             <Label
@@ -66,7 +102,7 @@ export default class Form extends React.Component {
             required
             value={clientSurname}
             name="clientSurname"
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
           />
           <div className="mb-2 block">
             <Label
@@ -81,6 +117,7 @@ export default class Form extends React.Component {
             name="clientEmail"
             value={clientEmail}
             placeholder="seu_email@gmail.com"
+            onChange={this.handleChange}
             required
           />
           <div className="mb-2 block">
@@ -97,8 +134,9 @@ export default class Form extends React.Component {
             rows={4}
             name="clientMessage"
             value={clientMessage}
+            onChange={this.handleChange}
           />
-          <Button type="submit" className="mt-4">
+          <Button type="submit" className="mt-4" onClick={this.sendEmail}>
             Enviar
           </Button>
         </div>
