@@ -1,12 +1,15 @@
 /* eslint-disable no-alert */
 /* eslint-disable class-methods-use-this */
+
+'strict mode';
+
 import React from 'react';
 import '../assets/css/styleForm.css';
-import emailjs from '@emailjs/browser';
 import {
   Label, TextInput, Button, Textarea,
 } from 'flowbite-react';
 import checkEmail from '../utils/checkEmail';
+import sendEmailJs from '../utils/sendEmails';
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -48,28 +51,14 @@ export default class Form extends React.Component {
     }
     if (clientMessage === '') {
       window.alert('Necessário o campo nome');
+      return;
     }
 
-    const templateParams = {
-      from_name: `${clientName} ${clientSurname}`,
-      message: clientMessage,
-      email: clientEmail,
-    };
-
-    const API_SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-    const API_EMAIL = process.env.REACT_APP_API_EMAIL;
-
     try {
-      const email = await emailjs.send(API_SERVICE_ID, 'template_392dpvp', templateParams, API_EMAIL);
-      window.alert(email.status);
-      this.setState({
-        clientName: '',
-        clientSurname: '',
-        clientEmail: '',
-        clientMessage: '',
-      });
+      const newState = await sendEmailJs(this.state);
+      this.setState(newState);
     } catch (error) {
-      alert(error.message);
+      window.alert(error.message);
     }
   };
 
