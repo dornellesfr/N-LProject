@@ -1,35 +1,87 @@
+/* eslint-disable no-alert */
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import '../assets/css/styleForm.css';
 import {
   Label, TextInput, Button, Textarea,
 } from 'flowbite-react';
+import checkEmail from '../utils/checkEmail';
+import sendEmailJs from '../utils/sendEmails';
+import PopUpErr from './PopUpErr';
+import Modal from './Modal';
 
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      clientName: '',
+      clientSurname: '',
+      clientEmail: '',
+      clientMessage: '',
+      popUp: false,
+      modal: false,
+    };
   }
 
-  handleInputChange = (e) => {
-    if (e.target.name === 'clientName') {
-      this.setState({ clientName: e.target.value });
+  setPopUp = () => {
+    const { popUp } = this.state;
+    if (!popUp) this.setState({ popUp: true });
+    if (popUp) this.setState({ popUp: false });
+  };
+
+  setModal = () => {
+    const { modal } = this.state;
+    if (!modal) this.setState({ modal: true });
+    if (modal) this.setState({ modal: false });
+  };
+
+  handleChange = ({ target }) => {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  sendEmail = async (e) => {
+    e.preventDefault();
+
+    const {
+      clientName, clientSurname, clientEmail, clientMessage,
+    } = this.state;
+
+    if (clientName === '') {
+      this.setPopUp();
+      return;
     }
-    if (e.target.name === 'clientSurname') {
-      this.setState({ clientSurname: e.target.value });
+    if (clientSurname === '') {
+      this.setPopUp();
+      return;
     }
-    if (e.target.name === 'clientEmail') {
-      this.setState({ clientEmail: e.target.value });
+    if (!checkEmail(clientEmail)) {
+      this.setPopUp();
+      return;
     }
-    if (e.target.name === 'clientMessage') {
-      this.setState({ clientMessage: e.target.value });
+    if (clientMessage === '') {
+      this.setPopUp();
+      return;
+    }
+
+    try {
+      const newState = await sendEmailJs(this.state);
+      this.setState(newState);
+      this.setModal();
+    } catch (error) {
+      this.setPopUp();
     }
   };
 
   render() {
     const {
-      clientName, clientSurname, clientEmail, clientMessage,
+      clientName, clientSurname, clientEmail, clientMessage, popUp, modal,
     } = this.state;
+    const { setPopUp, setModal } = this;
+
     return (
       <>
         <div id="contact-page-bg-1" className="fixed overflow-hidden" />
@@ -50,7 +102,7 @@ export default class Form extends React.Component {
             required
             value={clientName}
             name="clientName"
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
           />
           <div className="mb-2 block">
             <Label
@@ -66,7 +118,7 @@ export default class Form extends React.Component {
             required
             value={clientSurname}
             name="clientSurname"
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
           />
           <div className="mb-2 block">
             <Label
@@ -81,6 +133,7 @@ export default class Form extends React.Component {
             name="clientEmail"
             value={clientEmail}
             placeholder="seu_email@gmail.com"
+            onChange={this.handleChange}
             required
           />
           <div className="mb-2 block">
@@ -97,11 +150,14 @@ export default class Form extends React.Component {
             rows={4}
             name="clientMessage"
             value={clientMessage}
+            onChange={this.handleChange}
           />
-          <Button type="submit" className="mt-4">
+          <Button type="submit" className="mt-4" onClick={this.sendEmail}>
             Enviar
           </Button>
         </div>
+        <PopUpErr showPopUp={{ popUp, setPopUp }} />
+        <Modal showModal={{ modal, setModal }} />
 
       </>
     );
