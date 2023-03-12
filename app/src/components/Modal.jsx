@@ -7,6 +7,7 @@ function ModalJSX({ showModal }) {
 
   return (
     <Modal
+      value="center"
       dismissible
       show={modal}
       onClose={setModal}
@@ -24,7 +25,7 @@ function ModalJSX({ showModal }) {
           </p>
           <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
             Estamos trabalhando para poder entrar em contato com você.
-            Caso haja alguma demora verifique sua caixa de spam.
+            Caso tenha alguma demora verifique, por favor, sua caixa de spam.
             Agradecemos seu contato e estamos ansioso para poder te ajudar!
           </p>
         </div>
