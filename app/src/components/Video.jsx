@@ -9,7 +9,7 @@ export default class MyVideo extends React.Component {
   }
 
   render() {
-    const { id, items } = this.props;
+    const { id, item } = this.props;
     return (
       <section
         id={id}
@@ -21,7 +21,7 @@ export default class MyVideo extends React.Component {
           autoPlay
           muted
         >
-          <source src={items} type="video/mp4" />
+          <source src={item} type="video/mp4" />
         </video>
       </section>
     );
@@ -30,5 +30,5 @@ export default class MyVideo extends React.Component {
 
 MyVideo.propTypes = {
   id: PropTypes.string.isRequired,
-  items: PropTypes.element.isRequired,
+  item: PropTypes.element.isRequired,
 };

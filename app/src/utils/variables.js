@@ -32,7 +32,7 @@ export const CAROUSELS = [
       { url: assets.img1, message: '' },
     ],
     number: 2,
-    text: 'Além de prestar serviços, também, alugamos nossas máquinas de alta qualidade para outras pessoas ou empresa.',
+    text: 'Além de prestar serviços, também, alugamos nossas máquinas de alta qualidade para outras pessoas ou empresa. Solicite um orçamento: venha conhecer nossa empresa!',
   },
 ];
 
