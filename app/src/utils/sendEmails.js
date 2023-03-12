@@ -15,8 +15,7 @@ async function sendEmailJs(payload) {
   const API_EMAIL = process.env.REACT_APP_API_EMAIL;
 
   try {
-    const email = await emailjs.send(API_SERVICE_ID, 'template_392dpvp', templateParams, API_EMAIL);
-    window.alert(email.status);
+    await emailjs.send(API_SERVICE_ID, 'template_392dpvp', templateParams, API_EMAIL);
     return {
       clientName: '',
       clientSurname: '',
@@ -24,7 +23,13 @@ async function sendEmailJs(payload) {
       clientMessage: '',
     };
   } catch (error) {
-    return error.message;
+    window.alert(error.message);
+    return {
+      clientName: '',
+      clientSurname: '',
+      clientEmail: '',
+      clientMessage: '',
+    };
   }
 }
 
