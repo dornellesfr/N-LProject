@@ -1,8 +1,5 @@
 /* eslint-disable no-alert */
 /* eslint-disable class-methods-use-this */
-
-'strict mode';
-
 import React from 'react';
 import '../assets/css/styleForm.css';
 import {
@@ -10,6 +7,8 @@ import {
 } from 'flowbite-react';
 import checkEmail from '../utils/checkEmail';
 import sendEmailJs from '../utils/sendEmails';
+import PopUpErr from './PopUpErr';
+import Modal from './Modal';
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -19,8 +18,22 @@ export default class Form extends React.Component {
       clientSurname: '',
       clientEmail: '',
       clientMessage: '',
+      popUp: false,
+      modal: false,
     };
   }
+
+  setPopUp = () => {
+    const { popUp } = this.state;
+    if (!popUp) this.setState({ popUp: true });
+    if (popUp) this.setState({ popUp: false });
+  };
+
+  setModal = () => {
+    const { modal } = this.state;
+    if (!modal) this.setState({ modal: true });
+    if (modal) this.setState({ modal: false });
+  };
 
   handleChange = ({ target }) => {
     const { name } = target;
@@ -38,34 +51,37 @@ export default class Form extends React.Component {
     } = this.state;
 
     if (clientName === '') {
-      window.alert('Necessário preencher o campo nome');
+      this.setPopUp();
       return;
     }
     if (clientSurname === '') {
-      window.alert('Necessário o campo sobrenome');
+      this.setPopUp();
       return;
     }
     if (!checkEmail(clientEmail)) {
-      window.alert('Necessário um endereço de email válido');
+      this.setPopUp();
       return;
     }
     if (clientMessage === '') {
-      window.alert('Necessário o campo nome');
+      this.setPopUp();
       return;
     }
 
     try {
       const newState = await sendEmailJs(this.state);
       this.setState(newState);
+      this.setModal();
     } catch (error) {
-      window.alert(error.message);
+      this.setPopUp();
     }
   };
 
   render() {
     const {
-      clientName, clientSurname, clientEmail, clientMessage,
+      clientName, clientSurname, clientEmail, clientMessage, popUp, modal,
     } = this.state;
+    const { setPopUp, setModal } = this;
+
     return (
       <>
         <div id="contact-page-bg-1" className="fixed overflow-hidden" />
@@ -140,6 +156,8 @@ export default class Form extends React.Component {
             Enviar
           </Button>
         </div>
+        <PopUpErr showPopUp={{ popUp, setPopUp }} />
+        <Modal showModal={{ modal, setModal }} />
 
       </>
     );
