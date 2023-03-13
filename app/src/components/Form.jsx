@@ -86,7 +86,7 @@ export default class Form extends React.Component {
       <>
         <div id="contact-page-bg-1" className="fixed overflow-hidden" />
         <div id="contact-page-bg-2" className="fixed overflow-hidden" />
-        <div id="contact-page-form" className="bg-red-700 w-8/12 p-6 rounded-2xl shadow-2xl flex flex-col gap-2 md:w-4/12">
+        <main id="contact-page-form" className="bg-red-700 w-8/12 p-6 rounded-2xl shadow-2xl flex flex-col gap-2 md:w-4/12">
           <h2 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-white md:text-4xl">Entre em contato conosco</h2>
           <div className="mb-2 block">
             <Label
@@ -155,10 +155,9 @@ export default class Form extends React.Component {
           <Button type="submit" className="mt-4" onClick={this.sendEmail}>
             Enviar
           </Button>
-        </div>
-        <PopUpErr showPopUp={{ popUp, setPopUp }} />
-        <Modal showModal={{ modal, setModal }} />
-
+          <PopUpErr showPopUp={{ popUp, setPopUp }} />
+          <Modal showModal={{ modal, setModal }} />
+        </main>
       </>
     );
   }

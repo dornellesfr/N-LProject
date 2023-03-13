@@ -3,6 +3,7 @@
   padding: 10px;
   border-radius: 10px;
   align-items: center;
+  position: sticky;
 }
 
 #ul-navbar ul {
@@ -43,8 +44,4 @@
     background-color: #00339C;
     border-radius: 5px;
   }
-  #info-bar li {
-    font-size: 12px;
-  }
 }
-
