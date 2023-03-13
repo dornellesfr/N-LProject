@@ -21,7 +21,7 @@ class MyNavbar extends React.Component {
               servicos.nlterraplanagem@gmail.com
             </li>
             <li className="flex flex-row gap-2 items-center">
-              <Link to="/" className="flex flex-row gap-2 items-center">
+              <Link to="https://wa.me/5551995849857" target="_blank" className="flex flex-row gap-2 items-center">
                 <svg fill="#7d7d7d" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="-5.21 -5.21 41.09 41.09" xmlSpace="preserve">
                   <g id="SVGRepo_bgCarrier" strokeWidth="0" />
                   <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
