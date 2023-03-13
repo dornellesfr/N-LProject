@@ -2,6 +2,7 @@
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import '../assets/css/styleForm.css';
+import '../assets/css/styleContact.css';
 import {
   Label, TextInput, Button, Textarea,
 } from 'flowbite-react';
@@ -155,8 +156,8 @@ export default class Form extends React.Component {
           <Button type="submit" className="mt-4" onClick={this.sendEmail}>
             Enviar
           </Button>
-          <PopUpErr showPopUp={{ popUp, setPopUp }} />
-          <Modal showModal={{ modal, setModal }} />
+          <PopUpErr data-testid="popup" showPopUp={{ popUp, setPopUp }} />
+          <Modal data-testid="modal" showModal={{ modal, setModal }} />
         </main>
       </>
     );

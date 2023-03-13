@@ -37,11 +37,20 @@
   }
 }
 
-#contact-page-form div[data-testid='popup'] .shadow,
-#contact-page-form div[data-testid='modal'] .shadow {
+div[data-testid='modal'] .shadow,
+div[data-testid='modal'] > .max-w-2xl {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+div[data-testid='popup'] .shadow,
+div[data-testid='popup'] > .max-w-2xl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
 }
