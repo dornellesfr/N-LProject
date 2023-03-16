@@ -1,0 +1,32 @@
+.map-session {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: #00339C;
+}
+
+.map-session-title {
+  display: flex;
+  padding: 10px 50px;
+  border-radius: 4px;
+  width: fit-content;
+  height: min-content;
+  gap: 10px;
+  align-items: center;
+  margin: 10px;
+  justify-content: center;
+  border: white 1px solid;
+  text-align: center;
+}
+
+.localization-map {
+  width: 100%;
+  height: 30vh;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
+  align-self: center;
+}
+
+
+

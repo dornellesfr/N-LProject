@@ -7,7 +7,11 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'whatsapp-green': '#42e960',
+      },
+    },
   },
   // eslint-disable-next-line global-require
   plugins: [require('./node_modules/flowbite/plugin')],
