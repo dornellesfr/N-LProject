@@ -24,7 +24,7 @@ function About() {
       <h1 id="service-title" className="mb-2 text-4xl font-extrabold leading-none tracking-wide text-white md:text-5xl lg:text-6xl p-3 md:p-10">Um pouco sobre nós</h1>
       <main>
         <div className="content-text">
-          <section className="animate__animated animate__bounceInLeft history-1">
+          <section data-testid="page-about-first-box-text" className="animate__animated animate__bounceInLeft history-1">
             <h2 className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap">História da empresa</h2>
             <p className="text-white text-base lg:text-xl md:text-lg font-bold">
               A N&L prestadora de Serviços Ltda foi constituída
@@ -43,7 +43,7 @@ function About() {
               para auxiliar na construção e manutenção de rodovias.
             </p>
           </section>
-          <section className="animate__animated animate__bounceInRight history-2">
+          <section data-testid="page-about-second-box-text" className="animate__animated animate__bounceInRight history-2">
             <p className="text-white text-base lg:text-xl md:text-lg font-bold">
               Em 2014, decidimos investir em uma escavadeira hidráulica
               para atender aos amigos e clientes da área da agricultura,
@@ -58,7 +58,7 @@ function About() {
               e manutenção de estradas e rodovias.
             </p>
           </section>
-          <section className="animate__animated animate__bounceInLeft history-3">
+          <section data-testid="page-about-third-box-text" className="animate__animated animate__bounceInLeft history-3">
             <p className="text-white text-base lg:text-xl md:text-lg font-bold">
               Na sequência as empresas foram se desenvolvendo e se
               aperfeiçoando na área de abertura e manutenção de
@@ -83,9 +83,9 @@ function About() {
         <div className="team-part">
           <section className="team-content">
             <h2 className="text-white text-xl lg:text-3xl md:text-2xl font-bold whitespace-nowrap">Nossa equipe</h2>
-            <img className="img-team" src={assets.img39} alt="machine" />
-            <img className="img-team" src={assets.img38} alt="machine" />
-            <img className="img-team" src={assets.img37} alt="machine" />
+            <img className="img-team" src={assets.img39} alt="team" />
+            <img className="img-team" src={assets.img38} alt="team" />
+            <img className="img-team" src={assets.img37} alt="team" />
           </section>
         </div>
         <section className="contact-us">

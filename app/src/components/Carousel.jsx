@@ -22,16 +22,16 @@ class MyCarousel extends React.Component {
         <Carousel slideInterval={5000}>
           {items.map(
             (item) => (
-              <>
-                <img key={`${item.id}-url`} src={item.url} alt="..." style={{ pointerEvents: 'none' }} onScroll={this.disableScroll} className="h-fit overscroll-y-none w-full" />
+              <div key={`${item.id}-url`}>
+                <img src={item.url} alt="..." style={{ pointerEvents: 'none' }} data-testid="carousel-img" onScroll={this.disableScroll} className="h-fit overscroll-y-none w-full" />
                 <figcaption key={`${item.id}-legend`} className="absolute px-4 text-sm font-bold text-white bottom-16 legend md:text-xl">
                   <p key={`${item.id}-p`} />
                 </figcaption>
-              </>
+              </div>
             ),
-          )}
+          ) }
         </Carousel>
-        <aside className=" first-line:uppercase first-line:tracking-widest first-letter:text-xl first-letter:font-bold first-letter:text-white w-full text-sm text-white font-bold rounded-lg bg-black opacity-90 p-6 md:w-1/2 md:first-letter:text-7xl animate__animated animate__backInLeft aside-photo">{text}</aside>
+        <aside data-testid="carousel-text" className="first-line:uppercase first-line:tracking-widest first-letter:text-xl first-letter:font-bold first-letter:text-white w-full text-sm text-white font-bold rounded-lg bg-black opacity-90 p-6 md:w-1/2 md:first-letter:text-7xl animate__animated animate__backInLeft aside-photo">{text}</aside>
       </div>
 
     );
