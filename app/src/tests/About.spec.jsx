@@ -15,7 +15,6 @@ describe('Test page about', () => {
 
   beforeEach(async () => {
     const { history } = renderWithRouter(<App />);
-    window.scrollTo = jest.fn();
     const buttonAbout = screen.getByTestId('button-about');
     act(() => userEvent.click(buttonAbout));
     expect(history.location.pathname).toBe('/about');
@@ -54,7 +53,7 @@ describe('Test the button "fale conosco" on page "/about"', () => {
     window.location = new URL('http://localhost/');
   });
 
-  it('Should redirecto to page "/contact"', async () => {
+  it('Should redirec to to page "/contact"', async () => {
     const { history } = renderWithRouter(<App />);
     window.scrollTo = jest.fn();
     const buttonAbout = screen.getByTestId('button-about');

@@ -1,3 +1,4 @@
 module.exports = {
-  setupFiles: ['src/tests/Navbar.spec.jsx'],
+  // setupFilesAfterEnv: ['/home/fernando/Documentos/projetos-pessoais/NLSite/app/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
