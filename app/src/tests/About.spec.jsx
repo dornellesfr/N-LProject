@@ -20,7 +20,6 @@ describe('Test page about', () => {
     act(() => userEvent.click(buttonAbout));
     expect(history.location.pathname).toBe('/about');
   });
-
   it('should verify title in page "/about"', async () => {
     const title = await screen.findByText('Um pouco sobre nós');
     expect(title).toBeInTheDocument();
@@ -49,10 +48,25 @@ describe('Test page about', () => {
     expect(buttonToContact).toBeInTheDocument();
   });
 });
-describe('Testing button page "/about" to "/contact"', () => {
-  const { history } = renderWithRouter(<App />);
-  window.scrollTo = jest.fn();
-  const buttonAbout = screen.getByTestId('button-about');
-  act(() => userEvent.click(buttonAbout));
-  expect(history.location.pathname).toBe('/about');
+describe('Test the button "fale conosco" on page "/about"', () => {
+  beforeEach(() => {
+    delete window.location;
+    window.location = new URL('http://localhost/');
+  });
+
+  it('Should redirecto to page "/contact"', async () => {
+    const { history } = renderWithRouter(<App />);
+    window.scrollTo = jest.fn();
+    const buttonAbout = screen.getByTestId('button-about');
+    act(() => userEvent.click(buttonAbout));
+    expect(history.location.pathname).toBe('/about');
+
+    const buttonToContact = screen.getByRole('link', { name: /fale conosco/i });
+    act(() => userEvent.click(buttonToContact));
+
+    const titleContact = await screen.findByText('Entre em contato conosco');
+
+    expect(titleContact).toBeInTheDocument();
+    expect(history.location.pathname).toBe('/contact');
+  });
 });
