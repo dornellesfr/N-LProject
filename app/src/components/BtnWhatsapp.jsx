@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../assets/css/styleBtnWhatsapp.css';
 import whatsappLogo from '../assets/images/logos/whatsapplogo64.png';
 import close from '../assets/images/logos/close.png';
 
