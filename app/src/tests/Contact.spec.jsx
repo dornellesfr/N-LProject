@@ -154,4 +154,22 @@ describe('Test the service page', () => {
       process.env.REACT_APP_API_EMAIL,
     );
   });
+  it('should show banner with whatsapp when click in button', async () => {
+    const { history } = renderWithRouter(<App />);
+    const buttonContact = screen.getByTestId('button-contact');
+    act(() => userEvent.click(buttonContact));
+    await screen.findByText('Entre em contato conosco');
+    expect(history.location.pathname).toBe('/contact');
+
+    const buttonWpp = screen.getByTestId('page-contact-button-whatsapp');
+    expect(buttonWpp).toBeInTheDocument();
+
+    const whatsappBanner = screen.getByTestId('whatsapp-banner');
+    expect(whatsappBanner).toBeInTheDocument();
+    expect(whatsappBanner).toHaveStyle('display: none');
+
+    act(() => userEvent.click(buttonWpp));
+
+    await waitFor(() => expect(whatsappBanner).toHaveStyle('display: grid'));
+  });
 });
