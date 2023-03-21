@@ -24,7 +24,7 @@ class Whatsapp extends React.Component {
     const { display } = this.state;
     return (
     // toggle display between 1000% and auto
-      <div id="whatsapp-content" className="grid items-center auto-rows-max grid-cols-3 w-11/12 h-1/2 bg-black opacity-90 p-3 m-auto gap-4 md:w-4/12 md:h-1/2 md:grid-cols-3 animate__animated animate__bounceInLeft" style={{ display }}>
+      <div id="whatsapp-content" data-testid="whatsapp-banner" className="grid items-center auto-rows-max grid-cols-3 w-11/12 h-1/2 bg-black opacity-90 p-3 m-auto gap-4 md:w-4/12 md:h-1/2 md:grid-cols-3 animate__animated animate__bounceInLeft" style={{ display }}>
         <h2 className="col-span-full mb-6 text-sm p-2 h-6 text-white text-center uppercase md:text-lg">Entre em contato conosco também pelo whatsapp</h2>
         <img className="whatsapp-logow p-6 col-start-1 row-start-2" src={whatsappLogo} alt="logo-do-whatsapp" />
         <div className="col-span-2 row-start-2 flex flex-col bg-white p-4 rounded-2xl">
