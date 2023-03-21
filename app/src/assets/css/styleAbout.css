@@ -1,3 +1,16 @@
+#bg-about {
+  background-image: url(../images/bg/40.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -9999;
+  filter: blur(2px) brightness(.6);
+  transition: all 0.6s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
 .content-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
