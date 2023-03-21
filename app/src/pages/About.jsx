@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Background from '../components/Background';
-import bg from '../assets/images/bg/40.jpg';
 import '../assets/css/styleAbout.css';
 import assets from '../utils/images';
 
@@ -20,7 +18,7 @@ function About() {
 
   return (
     <>
-      <Background img={bg} />
+      <div id="bg-about" className="fixed w-screen h-screen overflow-hidden" />
       <h1 id="service-title" className="mb-2 text-4xl font-extrabold leading-none tracking-wide text-white md:text-5xl lg:text-6xl p-3 md:p-10">Um pouco sobre nós</h1>
       <main>
         <div className="content-text">
