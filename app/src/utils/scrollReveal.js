@@ -1,3 +1,5 @@
+import 'intersection-observer';
+
 export default function scrollReveal(observed, toggled, margin) {
   const observer = new IntersectionObserver(
     (entries) => {

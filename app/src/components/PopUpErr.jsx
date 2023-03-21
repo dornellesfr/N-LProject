@@ -23,6 +23,7 @@ function PopUpErr({ showPopUp }) {
           </h3>
           <div className="flex justify-center gap-4">
             <Button
+              data-testid="popup-button-close"
               color="failure"
               onClick={setPopUp}
             >
