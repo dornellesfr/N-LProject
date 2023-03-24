@@ -33,7 +33,7 @@ class Whatsapp extends React.Component {
           </h3>
           <img className="p-4" src={QrCode} alt="qr-code-whatsapp" />
         </div>
-        <Link to="https://wa.me/5551995849857" target="_blank" class="text-center whatsapp-button mt-6 px-36 col-span-full row-start-3 text-black bg-whatsapp-green hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 mr-2 mb-2 w-full focus:outline-none "> Enviar mensagem </Link>
+        <Link to="https://wa.me/5551995849857" target="_blank" className="text-center whatsapp-button mt-6 px-36 col-span-full row-start-3 text-black bg-whatsapp-green hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 mr-2 mb-2 w-full focus:outline-none "> Enviar mensagem </Link>
       </div>
     );
   }

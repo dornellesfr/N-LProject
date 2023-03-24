@@ -97,6 +97,7 @@ export default class Form extends React.Component {
             />
           </div>
           <TextInput
+            data-testid="page-contact-input-name"
             id="client-name"
             type="text"
             placeholder="Seu nome"
@@ -113,6 +114,7 @@ export default class Form extends React.Component {
             />
           </div>
           <TextInput
+            data-testid="page-contact-input-surname"
             id="client-surname"
             type="text"
             placeholder="Seu sobrenome"
@@ -129,6 +131,7 @@ export default class Form extends React.Component {
             />
           </div>
           <TextInput
+            data-testid="page-contact-input-email"
             id="email4"
             type="email"
             name="clientEmail"
@@ -145,6 +148,7 @@ export default class Form extends React.Component {
             />
           </div>
           <Textarea
+            data-testid="page-contact-input-text"
             id="comment"
             placeholder="Digite aqui..."
             required
@@ -153,7 +157,7 @@ export default class Form extends React.Component {
             value={clientMessage}
             onChange={this.handleChange}
           />
-          <Button type="submit" className="mt-4" onClick={this.sendEmail}>
+          <Button data-testid="page-contact-button-send" type="submit" className="mt-4" onClick={this.sendEmail}>
             Enviar
           </Button>
           <PopUpErr data-testid="popup" showPopUp={{ popUp, setPopUp }} />

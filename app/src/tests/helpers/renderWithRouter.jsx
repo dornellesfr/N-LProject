@@ -1,0 +1,19 @@
+import React from 'react';
+import { Router } from 'react-router-dom';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { createBrowserHistory } from 'history';
+import { render } from '@testing-library/react';
+import App from '../../App';
+
+const renderWithRouter = (path) => {
+  const history = createBrowserHistory();
+  history.push(path);
+  const { ...resources } = render(
+    <Router history={history}>
+      <App />
+    </Router>,
+  );
+  return { ...resources, history };
+};
+
+export default renderWithRouter;

@@ -21,7 +21,7 @@ class MyNavbar extends React.Component {
               servicos.nlterraplanagem@gmail.com
             </li>
             <li className="flex flex-row gap-2 items-center">
-              <Link to="https://wa.me/5551995849857" target="_blank" className="flex flex-row gap-2 items-center">
+              <Link to={{ pathname: 'https://wa.me/5551995849857' }} data-testid="navbar-whatsapp" target="_blank" className="flex flex-row gap-2 items-center">
                 <svg fill="#7d7d7d" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="-5.21 -5.21 41.09 41.09" xmlSpace="preserve">
                   <g id="SVGRepo_bgCarrier" strokeWidth="0" />
                   <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
@@ -47,7 +47,7 @@ class MyNavbar extends React.Component {
             className="bg-blue-600"
             id="nav-bar"
           >
-            <Navbar.Brand as={NavLink} to="/">
+            <Navbar.Brand data-testid="navbar-logo-nl" as={NavLink} to="/">
               <img
                 src={logoNL}
                 className="mr-3 h-6 sm:h-9 bg-blue-600"
@@ -57,7 +57,7 @@ class MyNavbar extends React.Component {
                 N&L
               </span>
             </Navbar.Brand>
-            <Navbar.Brand as={NavLink} to="/">
+            <Navbar.Brand data-testid="navbar-logo-mariana" as={NavLink} to="/">
               <img
                 src={mariana}
                 className="mr-3 h-6 sm:h-9"
@@ -80,16 +80,17 @@ class MyNavbar extends React.Component {
                 active
                 className="text-white items-center text-white"
                 id="home-button-navbar"
+                data-testid="button-home"
               >
                 Home
               </Navbar.Link>
-              <Navbar.Link as={NavLink} to="/services" className="text-white hover:bg-blue-800">
+              <Navbar.Link as={NavLink} to="/services" data-testid="button-services" className="text-white hover:bg-blue-800">
                 Serviços
               </Navbar.Link>
-              <Navbar.Link as={NavLink} to="/about" className="text-white hover:bg-blue-800">
+              <Navbar.Link as={NavLink} to="/about" data-testid="button-about" className="text-white hover:bg-blue-800">
                 Sobre
               </Navbar.Link>
-              <Navbar.Link as={NavLink} to="/contact" className="text-white hover:bg-blue-800">
+              <Navbar.Link as={NavLink} to="/contact" data-testid="button-contact" className="text-white hover:bg-blue-800">
                 Contato
               </Navbar.Link>
             </Navbar.Collapse>

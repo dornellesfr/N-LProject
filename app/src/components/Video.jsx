@@ -30,5 +30,5 @@ export default class MyVideo extends React.Component {
 
 MyVideo.propTypes = {
   id: PropTypes.string.isRequired,
-  item: PropTypes.element.isRequired,
+  item: PropTypes.node.isRequired,
 };

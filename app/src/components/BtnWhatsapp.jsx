@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../assets/css/styleBtnWhatsapp.css';
 import whatsappLogo from '../assets/images/logos/whatsapplogo64.png';
 import close from '../assets/images/logos/close.png';
 
@@ -54,7 +53,7 @@ class BtnWhatsapp extends React.Component {
   render() {
     const { btnStyle } = this.state;
     return (
-      <button id="whatsapp-btn" type="button" className="absolute top-24 right-2 flex items-center justify-center w-14 h-14 z-50 transition-all" style={btnStyle} onClick={this.handleClick.bind(this)}>
+      <button id="whatsapp-btn" data-testid="page-contact-button-whatsapp" type="button" className="absolute top-24 right-2 flex items-center justify-center w-14 h-14 z-50 transition-all" style={btnStyle} onClick={this.handleClick.bind(this)}>
         <span className="sr-only">Open</span>
       </button>
     );
