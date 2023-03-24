@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import whatsappLogo from '../assets/images/svg/whatsapplogo.svg';
 import QrCode from '../assets/images/svg/whatsappQrCode.svg';
-import '../assets/css/styleWhatsapp.css';
 
 class Whatsapp extends React.Component {
   constructor(props) {
@@ -24,10 +23,9 @@ class Whatsapp extends React.Component {
   render() {
     const { display } = this.state;
     return (
-    // toggle display between 1000% and auto
-      <div id="whatsapp-content" className="grid items-center auto-rows-max grid-cols-3 w-11/12 h-1/2 bg-black opacity-90 p-3 m-auto gap-4 md:w-4/12 md:h-1/2 md:grid-cols-3 animate__animated animate__bounceInLeft" style={{ display }}>
+      <div data-testid="whatsapp-banner" id="whatsapp-content" className="grid items-center auto-rows-max grid-cols-2 w-11/12 h-1/2 bg-black opacity-90 p-3 m-auto gap-4 sm:w-10/12 md:w-7/12 lg:w-6/12 xl:w-5/12 md:h-1/2 md:grid-cols-2 animate_animated animate_bounceInLeft" style={{ display }}>
         <h2 className="col-span-full mb-6 text-sm p-2 h-6 text-white text-center uppercase md:text-lg">Entre em contato conosco também pelo whatsapp</h2>
-        <img className="whatsapp-logow p-6 col-start-1 row-start-2" src={whatsappLogo} alt="logo-do-whatsapp" />
+        <img className="whatsapp-logow w-1/2 m-auto p-6 col-start-1 row-start-2" src={whatsappLogo} alt="logo-do-whatsapp" />
         <div className="col-span-2 row-start-2 flex flex-col bg-white p-4 rounded-2xl">
           <h3 className="p-4 text-sm font-extrabold leading-none tracking-tight text-black bg-white md:text-base">
             Aponte a câmera do celular para o QR code e
