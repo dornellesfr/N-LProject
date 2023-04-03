@@ -17,8 +17,8 @@ class CardCompany extends React.Component {
     return (
       <div className="w-full h-[100vh] flex flex-col justify-center bg-primary shadow-inner brightness-90 gap-y-4" style={box}>
         <div className="flex justify-center gap-x-10 p-6 grow-animation bg-white">
-          <img src={marianalogo} alt="mariana" id="logos-companies" className="rounded-full w-1/3 border-solid border-8 border-secondary md:w-60 hue-rotate-15 shadow-xl" />
-          <img src={nllogo} alt="NL Logo" id="logos-companies" className="rounded-full w-1/3 border-solid border-8 border-secondary md:w-60 hue-rotate-15 shadow-xl" />
+          <img src={marianalogo} alt="mariana" id="logos-companies" className="rounded-full w-1/3 border-solid border-8 border-secondary md:w-1/2 md:max-w-xs hue-rotate-15 shadow-xl" />
+          <img src={nllogo} alt="NL Logo" id="logos-companies" className="rounded-full w-1/3 border-solid border-8 border-secondary md:w-1/2 md:max-w-xs hue-rotate-15 shadow-xl" />
         </div>
         <h2 className="text-base md:text-lg lg:text-xl 2xl:text-2xl font-bold bg-secondary text-center text-slate-50 p-4 grow-animation">N&L Prestadora de Serviços e Mariana Terraplanagens</h2>
         <ul className="w-10/12 text-sm font-medium text-white bg-secondary border border-white rounded-lg m-auto grow-animation list-disc list-inside">
