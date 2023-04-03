@@ -87,8 +87,8 @@ export default class Form extends React.Component {
       <>
         <div id="contact-page-bg-1" className="fixed overflow-hidden" />
         <div id="contact-page-bg-2" className="fixed overflow-hidden" />
-        <main id="contact-page-form" className="bg-red-700 w-8/12 p-6 rounded-2xl shadow-2xl flex flex-col gap-2 md:w-4/12">
-          <h2 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-white md:text-4xl">Entre em contato conosco</h2>
+        <main id="contact-page-form" className="bg-red-700 w-8/12 p-6 rounded-2xl shadow-2xl flex flex-col justify-around gap-1 md:w-4/12" style={{ height: '75vh' }}>
+          <h2 className="mb-4 text-xl font-extrabold leading-none tracking-tight text-white md:text-2xl">Entre em contato conosco</h2>
           <div className="mb-2 block">
             <Label
               htmlFor="client-name"

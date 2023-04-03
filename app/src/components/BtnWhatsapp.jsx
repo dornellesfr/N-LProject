@@ -7,14 +7,14 @@ const btnStyleOpen = {
   backgroundImage: `url(${whatsappLogo})`,
   backgroundPosition: 'center',
   backgroundSize: 'cover',
-  backgroundRepeat: 'noRepeat',
+  backgroundRepeat: 'no-repeat',
 };
 
 const btnStyleClose = {
   backgroundImage: `url(${close})`,
   backgroundPosition: 'center',
   backgroundSize: 'cover',
-  backgroundRepeat: 'noRepeat',
+  backgroundRepeat: 'no-repeat',
 };
 
 class BtnWhatsapp extends React.Component {
