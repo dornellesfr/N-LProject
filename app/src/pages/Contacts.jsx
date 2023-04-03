@@ -26,7 +26,6 @@ class Contacts extends React.Component {
       <>
         <Form />
         <Whatsapp display={display} />
-        {/* <Maps /> */}
         <BtnWhatsapp onBtnClick={this.toggleWhatsapp} />
       </>
     );

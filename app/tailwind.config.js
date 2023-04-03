@@ -10,6 +10,8 @@ module.exports = {
     extend: {
       colors: {
         'whatsapp-green': '#42e960',
+        primary: '#00339C',
+        secondary: '#de0707',
       },
     },
   },
