@@ -48,12 +48,12 @@ class MyCarousel extends React.Component {
         <Carousel slideInterval={5000}>
           {items.map(
             (item) => (
-              <>
-                <img key={`${item.id}-url`} src={item.url} alt="..." style={{ pointerEvents: 'none' }} onScroll={this.disableScroll} className="h-fit overscroll-y-none w-full" />
+              <React.Fragment key={`${item.id}-url`}>
+                <img src={item.url} alt="..." style={{ pointerEvents: 'none' }} onScroll={this.disableScroll} className="h-fit overscroll-y-none w-full" />
                 <figcaption key={`${item.id}-legend`} className="absolute px-4 text-sm font-bold text-white bottom-16 legend md:text-xl">
                   <p key={`${item.id}-p`} />
                 </figcaption>
-              </>
+              </React.Fragment>
             ),
           )}
         </Carousel>
