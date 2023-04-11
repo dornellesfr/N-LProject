@@ -17,10 +17,6 @@ class MyCarousel extends React.Component {
     setTimeout(() => this.startIntersectionObserver(), 700);
   }
 
-  componentWillUnmount() {
-    this.observer.disconnect();
-  }
-
   startIntersectionObserver = () => {
     this.observer = new IntersectionObserver(
       (entries) => {

@@ -2,6 +2,8 @@
 import React from 'react';
 import { Timeline } from 'flowbite-react';
 import { HiCalendar } from 'react-icons/hi';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { debounce } from 'lodash';
 
 const style = {
   body: {
@@ -61,10 +63,32 @@ class TimeLineEmp extends React.Component {
   componentDidMount() {
     const refs = this.createRefs();
     this.setState({ refs });
-    setTimeout(() => this.startIntersectionObserver(), 700);
+    setTimeout(() => this.startIntersectionObserver(), 600);
+    setTimeout(() => this.setRootMargin, 800);
   }
 
-  startIntersectionObserver = () => {
+  getRootMargin = () => {
+    let rootMargin;
+    const width = document.body.clientWidt;
+    if (width >= 768) {
+      rootMargin = '-175px';
+    } else if (width >= 450 && width < 768) {
+      rootMargin = '-125px';
+    } else {
+      rootMargin = '-50px';
+    }
+    return rootMargin;
+  };
+
+  setRootMargin = () => {
+    window.addEventListener('resize', debounce(() => {
+      const rootMargin = this.getRootMargin();
+      this.startIntersectionObserver(rootMargin);
+    }, 700));
+  };
+
+  startIntersectionObserver = (_rootMargin) => {
+    const rootMargin = _rootMargin || this.getRootMargin();
     const { refs } = this.state;
     this.observer = new IntersectionObserver(
       (entries) => {
@@ -76,7 +100,7 @@ class TimeLineEmp extends React.Component {
           }
         });
       },
-      { root: null, rootMargin: '-150px', threshold: 0.7 },
+      { root: null, rootMargin, threshold: 1 },
     );
     refs.forEach((ref) => {
       if (ref.current) {
