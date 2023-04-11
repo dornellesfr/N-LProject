@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import whatsappLogo from '../assets/images/svg/whatsapplogo.svg';
 import QrCode from '../assets/images/svg/whatsappQrCode.svg';
-import '../assets/css/styleWhatsapp.css';
 
 class Whatsapp extends React.Component {
   constructor(props) {

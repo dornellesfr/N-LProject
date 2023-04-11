@@ -1,0 +1,68 @@
+.not-found-main-content {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    z-index: 21;
+    background-color: #00339c;
+    width: 100%;
+    height: 93vh;
+}
+
+.not-found-text {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.not-found-text h1 {
+    font-family: Arial;
+    font-size: 7rem;
+    font-weight: 800;
+    color: white;
+}
+
+.not-found-text a {
+    background-color: #de0707;
+    padding: 1.2rem 2rem;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+}
+
+.not-found-text a:hover {
+    background-color: #ad0606;
+}
+
+.not-found-text a:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.not-found-text p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.not-found-imgs {
+    justify-self: center;
+    align-self: center;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.not-found-error {
+    width: 100%;
+    display: block;
+    padding: 10rem;
+}
